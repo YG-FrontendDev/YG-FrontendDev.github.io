@@ -1,0 +1,132 @@
+body {
+	background-image: url(Background.jpg);
+	background-position: default;
+	background-size: cover;
+	background-repeat: repeat;
+}
+
+ul li a {
+	text-decoration: none;
+	font-family: sans;
+}
+nav a img {
+	width: 60px;
+	height: 60px;
+}
+
+#greet {
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	font-family: courier;
+}
+
+#YG {
+	float: left;
+	margin-left: 100px;
+	margin-top: 85px;
+	border-radius: 70px;
+}
+
+#aboutme {
+	margin-top: 100px;
+	color: darkblue;
+}
+
+#Contact form {
+	padding: 10px;
+}
+
+#Contact form button {
+	width: 80px;
+	height: 40px;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#Contact form input {
+	font-size: 20px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: lightblue;
+	font-family: sans;
+}
+
+#Contact form textarea {
+	font-size: 20px;
+	border: 2px solid lightblue;
+	font-family: sans;
+}
+
+#Contact form label {
+	color: black;
+	font-size: 18px;
+}
+
+footer {
+	width: 100%;
+	height: 575px;
+	padding-top: 150px;
+	font-size: 50px;
+	margin-top: 150px;
+	text-align: center;
+	font-family: sans;
+	background-color:  cadetblue;
+}
+
+footer address, a {
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+footer address a, label, #PP, #CR {
+	font-size: 20px;
+}
+
+footer address #FB {
+	color: #3b5998;
+}
+
+footer address #Linkedin:hover {
+	background-color: #ccff00;
+}
+
+footer #Linkedin {
+	color: #0e76a8;
+}
+
+footer address #FB:hover {
+	background-color: #ccff00;
+}
+
+footer address #Gmail {
+	color: rgb(150, 100, 255);
+}
+
+footer address #IG {
+	color: #fa7e1e;
+}
+
+footer address #IG:hover {
+	background-color: #ccff00;
+}
+
+footer address #Gmail:hover {
+	background-color: #ccff00;
+}
+
+footer address #YouTube {
+	color: #FF0000;
+}
+
+footer address #YouTube:hover {
+	background-color: #ccff00;
+}
+
+footer address #Linkedin, #Github, #FB, #Gmail, #IG, #YouTube {
+	padding: 10px;
+	font-size: 20px;
+	border-radius: 5px;
+	background-color: white;
+	text-decoration: none;
+}

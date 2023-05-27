@@ -1,0 +1,19 @@
+div ul li,a {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#About-Tesla {
+    margin-top: 50px;
+}
+footer label {
+    width: 100%; 
+    height: 50px; 
+    background-color: lightslategray; 
+    color: white; 
+    padding: 0px;
+    text-align: center; 
+    margin-top: 100px;
+}
+footer label {
+    padding-top: 10px;
+}

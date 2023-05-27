@@ -1,0 +1,32 @@
+ul li a {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: darkviolet;
+}
+ul li a.active {
+    font-weight: bold;
+}
+#header {
+    background-image: url(header.png);
+    background-position: default;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#header_links {
+    color: white; 
+    text-decoration: none;
+}
+#imgs img {
+    width: 100px;
+    height: default;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+address a {
+    text-decoration: none;
+    color: white;
+}
+footer a {
+    text-decoration: none;
+    margin-right: 20px;
+}
