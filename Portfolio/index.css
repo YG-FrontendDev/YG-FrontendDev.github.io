@@ -108,6 +108,7 @@ footer address, a {
 footer label {
 	font-size: 16px;
 	color: white;
+	font-family: sans-serif;
 }
 
 footer label a {
