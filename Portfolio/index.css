@@ -15,6 +15,20 @@ nav a img {
 	height: 60px;
 }
 
+#search button {
+	width: 20%;
+	background: #04AA6D;
+	color: white;
+	font-size: 16px;
+	border: 2px solid white;
+	border-left: none;
+	cursor: pointer;
+}
+
+#search button:hover {
+	background: #0b7dda;
+}
+
 #greet {
 	color: white;
 	text-align: center;
