@@ -58,6 +58,16 @@ nav a img {
 	background-color: #04AA6D;
 }
 
+.cpp {
+	width: 60%;
+	background-color: #FFCC00;
+}
+
+.java {
+	width: 60%;
+	background-color: #FFCC00;
+}
+
 #Contact form {
 	padding: 10px;
 }
