@@ -70,7 +70,7 @@ nav a img {
 }
 
 #Contact form input {
-	font-size: 20px;
+	font-size: 18px;
 	border-width: 2px;
 	border-style: solid;
 	border-color: lightblue;
@@ -78,14 +78,15 @@ nav a img {
 }
 
 #Contact form textarea {
-	font-size: 20px;
+	font-size: 18px;
 	border: 2px solid lightblue;
 	font-family: sans;
 }
 
 #Contact form label {
 	color: black;
-	font-size: 18px;
+	font-size: 16px;
+	font-family: sans;
 }
 
 footer {
