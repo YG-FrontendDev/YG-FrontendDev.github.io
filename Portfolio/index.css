@@ -8,6 +8,8 @@ body {
 ul li a {
 	text-decoration: none;
 	font-family: sans;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 nav a img {
