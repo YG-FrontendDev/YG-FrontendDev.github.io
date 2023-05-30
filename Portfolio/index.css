@@ -37,17 +37,6 @@ nav a img {
 	font-family: courier;
 }
 
-#Skills {
-	background-color: white;
-	box-shadow: -5px -5px 5px white, 5px 5px 5px white;
-}
-
-.skills {
-	text-align: right;
-	padding: default;
-	color: white;
-}
-
 .html {
 	width: 90%;
 	background-color: #04AA6D;
