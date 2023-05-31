@@ -24,6 +24,7 @@ ul li.visited {
 nav a img {
 	width: 40px;
 	height: default;
+	margin-left: 10px;
 }
 
 #search button {
