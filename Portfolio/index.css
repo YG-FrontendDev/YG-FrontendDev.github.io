@@ -10,6 +10,15 @@ ul li a {
 	font-family: sans;
 	margin-left: 10px;
 	margin-right: 10px;
+	font-size: 16px;
+}
+
+ul li a.active {
+	color: red;
+}
+
+ul li.visited {
+	color: purple;
 }
 
 nav a img {
