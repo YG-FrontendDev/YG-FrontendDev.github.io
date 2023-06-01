@@ -14,11 +14,7 @@ ul li a {
 }
 
 ul li a.active {
-	color: red;
-}
-
-ul li.visited {
-	color: purple;
+	font-weight: bold;
 }
 
 nav a img {
