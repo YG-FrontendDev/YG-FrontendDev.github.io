@@ -24,27 +24,27 @@
             <div class="col">
                 <form action="#" method="dialog" name="form" id="form">
                     <label for="username">Username</label>
-                    <input type="text" class="form-control" id="username" placeholder="Enter Username">
+                    <input type="text" class="form-control" id="username" placeholder="Enter Username" required>
                     <label for="amount">Amount</label>
-                    <input type="number" class="form-control" id="amount" placeholder="Enter Amount (ETB)">
+                    <input type="number" class="form-control" id="amount" placeholder="Enter Amount (ETB)" required>
                     <center>
-                        <button type="submit" id="register" class="btn btn-primary">Register</button>
-                        <p id="amount_error" class='hidden'>You Can't Pay Twice</p>
+                        <button type="submit" id="register" class="btn btn-primary" onclick="checkUserData();">Register</button>
+                        <p id="amount_error" class='hidden'></p>
                     </center>
                 </form>
             </div>
             <div class="col" id="display" style="margin-left: 20px;">
                 <marquee>
-                    <h2>Let's Find Winner</h2>
+                    <h2>Let's Find a Winner</h2>
                 </marquee>
-                <table id="table-data">
+                <table id="user-data">
                     <tr>
                         <th>Username</th>
                         <th>Amount</th>
                     </tr>
                 </table>
                 <center>
-                    <button id="winner_btn" class="btn btn-info">Get The Winner</button>
+                    <button id="winner_btn" class="btn btn-info">Get a Winner</button>
                 </center>
             </div>
         </div>
@@ -52,39 +52,37 @@
     <script>
         let getWinner = true;
 
-        let username = document.getElementById('username');
-        let amount = document.getElementById('amount');
-        let table = document.getElementById('table-data');
+        let users_username = document.getElementById('username');
+        let users_amount = document.getElementById('amount');
+        let table = document.getElementById('user-data');
 
         let saved_money;
-
         const ekub_users = [];
-
         const amounts = [];
 
         let i = 0;
         let form = document.getElementById('form');
-        amount.addEventListener('input', () => {
+        users_amount.addEventListener('input', () => {
             if (i === 0) {
-                amounts[0] = amount.value;
+                amounts[0] = users_amount.value;
                 saved_money = amounts[0];
             }
         });
 
         form.addEventListener("submit", function(e) {
             e.preventDefault();
-            if (getWinner && amount.value === saved_money) {
+            if (getWinner && users_amount.value === saved_money) {
                 document.getElementById('amount_error').classList.add('hidden');
 
                 var row = document.createElement('tr');
                 var col1 = document.createElement('td');
                 var col2 = document.createElement('td');
 
-                col1.innerHTML = username.value;
-                col2.innerHTML = amount.value + " ETB";
+                col1.innerHTML = users_username.value;
+                col2.innerHTML = users_amount.value + " ETB";
 
-                ekub_users[i] = username.value;
-                amounts[i] = amount.value;
+                ekub_users[i] = users_username.value;
+                amounts[i] = users_amount.value;
 
                 i++;
 
@@ -93,7 +91,7 @@
 
                 table.appendChild(row);
 
-            } else if (amount.value != money) {
+            } else if (users_amount.value != saved_money) {
                 document.getElementById('amount_error').classList.remove('hidden')
             }
 
@@ -110,11 +108,18 @@
 
                 var msg_for_winner = document.createElement('h2');
                 msg_for_winner.innerHTML = `
-                <label style='color: limegreen; 
-                text-transform: capitalize; font-size: 20px;'>
-                Congratulation&nbsp;&nbsp;"${
-                    ekub_users[rand]
-                }"<label>&nbsp;&nbsp;You're The Winner`;
+                <label style='text-transform: capitalize;'>
+                    Username: ${ekub_users[rand]}</label><br>
+                    Amount: ${Number(amounts[0]) * amounts.length} ETB 
+                </label>
+                <br><br>
+                <label style='color: limegreen; font-size: 20px;
+                    text-transform: capitalize;'>
+                    ${ekub_users[rand]} 
+                </label>
+                <label style='color: limegreen; font-size: 20px;'>
+                    is a Winner!
+                </label>`;
                 winner_msg_place.appendChild(msg_for_winner);
                 check_winner_btn.classList.add('hidden');
                 Submit.disabled = true;
