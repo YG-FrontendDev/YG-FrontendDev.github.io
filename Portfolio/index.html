@@ -342,25 +342,25 @@
     <div class="container" id="Contact" style="background-color: white; box-shadow: -5px -5px 5px white, 5px 5px 5px white;
     ">
         <div class="offset-md-2">
-            <form action="mailto:yadenogelasa@gmail.com" method="post" class="form-vertical" target="_blank">
+            <form action="mailto:yadenogelasa@gmail.com" method="post" autocomplete="on" class="form-vertical" target="_blank">
                 <div class="form-row">
                     <div class="col-md-5 mb-4">
                         <label for="Username">Username</label>
-                        <input type="text" id="username" class="form-control" name="username" placeholder="Enter username" required="true" size="" minlength="" maxlength="">
+                        <input type="text" id="username" class="form-control" name="username" placeholder="Enter username" size="" minlength="" maxlength="" required>
                     </div>
                     <div class="col-md-5 mb-4">
                         <label for="Email">Email</label>
-                        <input type="email" id="Email" class="form-control" name="email" placeholder="Enter your email address" required="true" minlength="" maxlength="">
+                        <input type="email" id="Email" class="form-control" name="email" placeholder="Enter your email address" size="" minlength="" maxlength="" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-md-10 mb-4">
                         <label for="Message">Message</label>
-                        <textarea class="form-control" rows="5px" minlength="" maxlength="200" name="message" id="user_message" placeholder="Feel free to contact me!" required="true"></textarea>
+                        <textarea class="form-control" rows="5px" minlength="" maxlength="200" name="message" id="message" placeholder="Feel free to contact me!" required></textarea>
                     </div>
                 </div>
                 <button type="submit" name="submit" class="btn btn-primary" data-toggle="button" aria-pressed="false">Submit</button>
-                <button type="reset" name="clear" class="btn btn-secondary" data-toggle="button" aria-pressed="false" style="float: right;">Clear</button>
+                <button type="reset" name="reset" class="btn btn-secondary" data-toggle="button" aria-pressed="false" style="float: right;">Clear</button>
             </form>
         </div>
     </div>
