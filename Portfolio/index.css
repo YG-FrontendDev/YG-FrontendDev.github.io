@@ -1,127 +1,130 @@
 body {
-	background-image: url(Background.jpg);
-	background-position: default;
-	background-size: cover;
-	background-repeat: repeat;
+    background-image: url(Background.jpg);
+    background-position: default;
+    background-size: cover;
+    background-repeat: repeat;
 }
 
 ul li a {
-	text-decoration: none;
-	font-family: sans;
-	margin-left: 10px;
-	margin-right: 10px;
-	font-size: 16px;
+    text-decoration: none;
+    font-family: sans;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 16px;
 }
 
 ul li a.active {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 nav a img {
-	width: 40px;
-	height: default;
-	margin-left: 10px;
+    width: 40px;
+    height: default;
+    margin-left: 10px;
+}
+
+#search input {
+    font-family: sans;
 }
 
 #search button {
-	width: 20%;
-	background: #04AA6D;
-	color: white;
-	font-size: 16px;
-	border: 2px solid white;
-	border-left: none;
-	cursor: pointer;
+    width: 20%;
+    background: #04AA6D;
+    color: white;
+    font-size: 16px;
+    border: 2px solid white;
+    border-radius: 5px;
 }
 
 #search button:hover {
-	background: #0b7dda;
+    background: #0b7dda;
 }
 
 #greet {
-	color: white;
-	text-align: center;
-	font-family: courier;
+    color: white;
+    text-align: center;
+    font-family: courier;
 }
 
 .html {
-	width: 90%;
-	background-color: #04AA6D;
+    width: 90%;
+    background-color: #04AA6D;
 }
 
 .css {
-	width: 80%;
-	background-color: #04AA6D;
+    width: 80%;
+    background-color: #04AA6D;
 }
 
 .js {
-	width: 60%;
-	background-color: #FFCC00;
+    width: 60%;
+    background-color: #FFCC00;
 }
 
 .bootstrap {
-	width: 80%;
-	background-color: #04AA6D;
+    width: 80%;
+    background-color: #04AA6D;
 }
 
 .cpp {
-	width: 60%;
-	background-color: #FFCC00;
+    width: 60%;
+    background-color: #FFCC00;
 }
 
 .java {
-	width: 60%;
-	background-color: #FFCC00;
+    width: 60%;
+    background-color: #FFCC00;
 }
 
 #Contact form {
-	padding: 10px;
+    padding: 10px;
 }
 
 #Contact form button {
-	width: 80px;
-	height: 40px;
-	font-size: 14px;
-	font-weight: bold;
+    width: 80px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 #Contact form input {
-	font-size: 18px;
-	border-width: 2px;
-	border-style: solid;
-	border-color: lightblue;
-	font-family: sans;
+    font-size: 18px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: lightblue;
+    font-family: sans;
 }
 
 #Contact form textarea {
-	font-size: 18px;
-	border: 2px solid lightblue;
-	font-family: sans;
+    font-size: 18px;
+    border: 2px solid lightblue;
+    font-family: sans;
 }
 
 #Contact form label {
-	color: black;
-	font-size: 16px;
-	font-family: sans;
+    color: black;
+    font-size: 16px;
+    font-family: sans;
 }
 
 footer {
-	width: 100%;
-	height: 578px;
-	padding-top: 170px;
-	margin-top: 150px;
+    width: 100%;
+    height: 578px;
+    padding-top: 170px;
+    margin-top: 150px;
 }
 
 footer label {
-	font-size: 15px;
-	color: darkblue;
-	margin-top: 50px;
+    font-size: 15px;
+    color: darkblue;
+    margin-top: 50px;
 }
 
 footer #PP a {
-	color: darkblue;
-	text-decoration: none;
+    color: darkblue;
+    text-decoration: none;
 }
 
 footer label a {
-	text-decoration: none;
+    text-decoration: none;
 }
