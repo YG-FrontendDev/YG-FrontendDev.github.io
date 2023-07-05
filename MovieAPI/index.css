@@ -1,0 +1,90 @@
+.navbar {
+    background-color: blueviolet;
+    width: auto;
+    height: auto;
+}
+
+.navbar nav a img {
+    width: 80px;
+    height: auto;
+    margin-left: 50px;
+    margin-right: 150px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-family: sans;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+}
+
+.navbar ul li a.active {
+    text-decoration: overline;
+}
+
+.navbar ul li a:hover {
+    color: silver;
+}
+
+.navbar ul li button {
+    width: 50px;
+    height: 30px;
+    color: white;
+    background-color: limegreen;
+    border: 1px solid white;
+}
+
+.navbar ul li input {
+    font-family: sans;
+}
+
+header h1 {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    font-size: 20px;
+    font-family: sans;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    height: 380px;
+    width: 300px;
+    margin: 20px;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 150px;
+}
+
+.card:hover,
+.card:focus {
+    transform: scale(1.05);
+    box-shadow: 3px 3px 3px blue, -3px -3px 3px blue;
+}
+
+.row {
+    width: auto;
+    height: 100px;
+    background-color: blueviolet;
+    text-align: center;
+}
+
+.row .col footer a {
+    color: white;
+    text-decoration: none;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-family: sans;
+}
+
+.row .col footer label {
+    margin-top: 30px;
+}
