@@ -1,4 +1,4 @@
-let collector = document.getElementById('movies');
+let movieList = document.getElementById('movies');
 
 function displayData(data) {
     for (let i = 0; i < data.results.length; i++) {
@@ -11,7 +11,7 @@ function displayData(data) {
             'https://image.tmdb.org/t/p/w500/' + data.results[i].poster_path;
         card.appendChild(image);
         card.appendChild(text);
-        collector.appendChild(card);
+        movieList.appendChild(card);
     }
 }
 window.addEventListener('load', () => {
@@ -35,7 +35,7 @@ window.addEventListener('load', () => {
     .catch(err => console.error(err));
 
     document.getElementById('search-btn').addEventListener('click', () => {
-        collector.innerHTML = '';
+        movieList.innerHTML = '';
         let url =
             'https://api.themoviedb.org/3/search/movie?api_key=8f37545c884c451558817e9c14a10825&query=' +
             document.getElementById('input-box').value;
@@ -58,7 +58,7 @@ window.addEventListener('load', () => {
             image.src = data.Poster;
             card.appendChild(image);
             card.appendChild(text);
-            collector.appendChild(card);
+            movieList.appendChild(card);
         });
 });
 
