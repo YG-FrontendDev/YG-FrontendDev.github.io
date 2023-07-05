@@ -1,5 +1,5 @@
 .container-fluid {
-    background-color: blueviolet;
+    background-color: darkblue;
     width: auto;
     height: auto;
 }
@@ -77,8 +77,8 @@ header h1 {
 
 .row {
     width: auto;
-    height: 100px;
-    background-color: black;
+    height: 80px;
+    background-color: darkblue;
     text-align: center;
 }
 
