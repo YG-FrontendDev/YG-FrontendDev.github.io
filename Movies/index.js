@@ -35,11 +35,11 @@ window.addEventListener('load', () => {
 
     .catch(err => console.error(err));
 
-    document.getElementById('search-btn').addEventListener('click', () => {
+    document.getElementById('search').addEventListener('click', () => {
         movieList.innerHTML = '';
         let url =
-            'https://api.themoviedb.org/3/search/movie?api_key=8f37545c884c451558817e9c14a10825&query=' +
-            document.getElementById('input-box').value;
+            'https://api.themoviedb.org/3/search/movie?api_key=1c1365699ac0104d31b22334df2a2913&query=' +
+            document.getElementById('user_input').value;
         fetch(url)
             .then(response => response.json())
             .then(data => {
@@ -67,7 +67,7 @@ const options = {
     method: 'GET',
     headers: {
         accept: 'application/json',
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4ZjM3NTQ1Yzg4NGM0NTE1NTg4MTdlOWMxNGExMDgyNSIsInN1YiI6IjY0OWRjNjAxYzA3MmEyMDBhZjg0OTZkYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.QEDL0fcw6dngz1maWfP-Ujkstg9viFY0BjKm7Qeb2FU'
+        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxYzEzNjU2OTlhYzAxMDRkMzFiMjIzMzRkZjJhMjkxMyIsInN1YiI6IjY0OWY1MzQyOGMwYTQ4MDExZTFiYWYzMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.XZTaSNGkgFMRPfpBUQ4J8lgOgpFoOFbPDlc4fcmZqfA'
     }
 };
 
