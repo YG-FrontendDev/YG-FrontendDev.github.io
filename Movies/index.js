@@ -14,6 +14,7 @@ function displayData(data) {
         movieList.appendChild(card);
     }
 }
+
 window.addEventListener('load', () => {
     const options = {
         method: 'GET',
@@ -46,7 +47,7 @@ window.addEventListener('load', () => {
             });
     });
 
-    fetch('https://api.tvmaze.com/shows/1')
+    fetch('https://api.tvmaze.com/seasons/1/episodes')
     fetch('https://www.omdbapi.com/?i=tt3896198&apikey=7d2bb612')
         .then(response => response.json())
         .then(data => {
@@ -61,8 +62,6 @@ window.addEventListener('load', () => {
             movieList.appendChild(card);
         });
 });
-
-
 
 const options = {
     method: 'GET',
