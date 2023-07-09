@@ -24,88 +24,89 @@
 </head>
 
 <body style="background-color: darkblue">
-    <header style="background-color: white;">
+    <header style="background-color: whitesmoke;">
         <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg bg-light" role="navigation">
-                <div class="container-fluid">
-                    <a href="index.html" class="navbar-brand" hreflang="en" target="_self" rel="noopener noreferrer">
-                        <img src="Logo.png" class="img-fluid" alt="Logo" title="Logo">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <nav class="navbar navbar-expand-lg" role="navigation">
+                <a href="index.html" class="navbar-brand" hreflang="en" target="_self" rel="noopener noreferrer">
+                    <img src="Logo.png" class="img-fluid" alt="Logo" title="Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto" id="myUL">
-                            <li class="nav-item">
-                                <a href="index.html" class="active" hreflang="en" target="_self" rel="noopener noreferrer">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto" id="myUL">
+                        <li class="nav-item">
+                            <a href="index.html" class="active" hreflang="en" target="_self" rel="noopener noreferrer">
                                     HOME
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#About" class="" hreflang="en" target="_self" rel="noopener noreferrer">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#About" class="" hreflang="en" target="_self" rel="noopener noreferrer">
                                     ABOUT
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#Skills" class="" hreflang="en" target="_self" rel="noopener noreferrer">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#Skills" class="" hreflang="en" target="_self" rel="noopener noreferrer">
                                     SKILLS
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#Projects" class="" hreflang="en" target="_self" rel="noopener noreferrer">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#Projects" class="" hreflang="en" target="_self" rel="noopener noreferrer">
                                     PROJECTS
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#Achievements" class="" hreflang="en" target="_self" rel="noopener noreferrer">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#Achievements" class="" hreflang="en" target="_self" rel="noopener noreferrer">
                                     ACHIEVEMENTS
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#Contact" class="" hreflang="en" target="_self" rel="noopener noreferrer">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#Contact" class="" hreflang="en" target="_self" rel="noopener noreferrer">
                                     CONTACT
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="https://hundaaf.blog" class="" hreflang="en" target="_blank" rel="noopener noreferrer">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://hundaaf.blog" class="" hreflang="en" target="_blank" rel="noopener noreferrer">
                                     BLOG
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="d-flex" role="search" id="search">
-                            <input type="text" class="form-control me-1" id="user_input" placeholder="Search web content" aria-label="Search">
-                            <button type="submit" class="fa fa-search" id="search_btn" onclick="search();"></button>
-                            <script>
-                                let query = document.querySelector("#user_input");
-                                let search_btn = document.querySelector("#search_btn");
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="d-flex" role="search" id="search">
+                        <input type="text" class="form-control me-1" id="user_input" placeholder="Search web content" aria-label="Search">
+                        <button type="submit" class="fa fa-search" id="search_btn" onclick="search();"></button>
+                        <script>
+                            let query = document.querySelector("#user_input");
+                            let search_btn = document.querySelector("#search_btn");
 
-                                search_btn.onclick = function() {
+                            search_btn.onclick = function() {
 
-                                    let url = "https://yg-frontenddev.github.io/Portfolio/search?q=" + query.value;
+                                let url = "https://yg-frontenddev.github.io/Portfolio/search?q=" + query.value;
 
-                                    window.open(url, "_self");
-                                }
-                            </script>
-                        </div>
+                                window.open(url, "_self");
+                            }
+                        </script>
                     </div>
+                </div>
             </nav>
-            </div>
+        </div>
         </div>
         </div>
     </header>
+
     <img src="Header_Image.png" class="img-fluid" width="100%" height="auto" alt="Header Image">
     <center>
         <h5 style="font-family: courier;
-	margin-top: 50px; color: white; font-size: 22px; margin-bottom: 80px;">About</h5>
+	margin-top: 100px; color: white; font-size: 20px; margin-bottom: 50px;">About</h5>
         <div class="container" id="About" style="font-family: sans; background-color: white;">
             <div class="row">
                 <div class="col">
                     <p>
                         <img src="YG3.png" width="400px" height="auto" alt="Yadenno Galassa" title="Yadenno Galassa" style="float: left;">
-                        <label style="margin-top: 80px; float: left;">
-                            Hi there! My name is Yadenno Galassa. I 'm passionate Frontend Web Developer.
-                            <br>Currently i'm <sub>3</sub><sup>rd</sup> year computer science student at
-                            <a href="https://actamericancollege.com" target="_blank" hreflang="en" rel="noopener noreferrer" style="margin-left: 0px; margin-right: 0px; text-decoration: none;">
+                        <label style="margin-top: 80px; text-align: left;">
+                            Hi there! 
+                            <br>My name is Yadenno Galassa. I 'm passionate Frontend Web Developer.
+                            <br>Currently, I'm 3<sup>rd</sup> year computer science student at
+                            <a href="https://actamericancollege.com" target="_blank" hreflang="en" rel="noopener noreferrer" style="text-decoration: none;">
                                     American College of Technology.
                             </a>
                         </label>
@@ -113,12 +114,9 @@
                 </div>
             </div>
         </div>
-        <div class="row" style="margin-top: 100px;">
-            <div class="col" style="margin-bottom: 50px;">
-                <center>
-                    <h6 style="font-family: courier;
-                    margin-top: 50px; margin-bottom: 20px; color: white; font-size: 18px;">What Can I Do</h6>
-                </center>
+        <div class="row" style="margin-top: 200px; margin-bottom: 50px;">
+            <div class="col">
+                <h6 style="font-family: courier; color: white; font-size: 18px;">What Can I Do</h6>
             </div>
         </div>
         <div class="row">
@@ -129,9 +127,9 @@
                         <h6 class="card-title" style="text-align: center;">CMS</h6>
                         <p class="card-text" style="text-align: left;">
                             I have been working on web development & web management via CMS (Content Management System) specifically on <a href="https://wordpress.com/" target="_blank" style="margin-left: 0px; margin-right: 0px; text-decoration: none;">WordPress</a>                            for over 3 years on my own WordPress Website which is called
-                            <a href="https://hundaaf.blog" target="_blank" style="margin-left: 0px; margin-right: 0px; text-decoration: none;" hreflang="en" rel="noopener noreferrer">hundaaf.blog.</a>
-                            <br>So, i have a knowledge of content management system. i can develop attractive, responsive, well structured website for your company even with CMS or i can design your company website from scratch as you can check my previous
-                            <a href="#Projects" style="margin-left: 0px; margin-right: 0px; text-decoration: none;">projects</a> down below.
+                            <a href="https://hundaaf.blog" target="_blank" style="text-decoration: none;" hreflang="en" rel="noopener noreferrer">hundaaf.blog.</a>
+                            <br>So, I have a knowledge of content management system. I can develop attractive, responsive, well structured website for your company even with CMS or I can design your company website from scratch as you can check my previous
+                            <a href="#Projects" style="text-decoration: none;">projects</a> down below.
                         </p>
                     </div>
                 </div>
