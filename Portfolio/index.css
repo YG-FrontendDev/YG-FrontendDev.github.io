@@ -1,13 +1,25 @@
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
 ul li a {
     text-decoration: none;
     font-family: sans;
     margin-left: 20px;
     margin-right: 20px;
     font-size: 14px;
+    color: darkviolet;
 }
 
 ul li a.active {
     font-weight: bold;
+}
+
+ul li a:hover {
+    color: #0b7dda;
 }
 
 nav a img {
@@ -36,13 +48,13 @@ nav a img {
 }
 
 .card {
-    box-shadow: 5px 5px 5px blue, -5px -5px 5px blue;
+    box-shadow: 5px 5px 5px darkblue, -5px -5px 5px darkblue;
 }
 
 .card:hover,
 .card:focus {
     transform: scale(1.05);
-    box-shadow: 5px 5px 5px aqua, -5px -5px 5px aqua;
+    box-shadow: 5px 5px 5px white, -5px -5px 5px white;
 }
 
 #Contact form {
@@ -78,7 +90,7 @@ nav a img {
 }
 
 footer {
-    margin-top: 400px;
+    margin-top: 300px;
     width: 100%;
     height: auto;
 }
