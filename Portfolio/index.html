@@ -11,20 +11,19 @@
     <meta name="description" content="Yadenno Galassa's Portfolio Website!">
     <meta name="keywords" content="Yadenno-Galassa, Yadenno's-Portfolio, Yadenno's-Portfolio-Website">
     <title>Portfolio</title>
-    <link rel="icon" type="image/.png" href="Logo.png">
+    <link rel="icon" href="Logo.png" type="image/.png">
 
     <!-- External CSS That Created By Developer -->
     <link rel="stylesheet" href="index.css" type="text/css">
     <!-- 
-    Online External Bootstrap CSS & JS CDN
-    I Used This Online CDN To Reduce or Minimize File Size 
+    External Bootstrap CSS & JS CDN 
     -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body style="background-color: darkblue">
     <header style="background-color: white;">
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg bg-light" role="navigation">
@@ -36,136 +35,128 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto" id="myUL">
                             <li class="nav-item">
-                                <a href="index.html" class="nav-link active" hreflang="en" target="_self" rel="noopener noreferrer">
+                                <a href="index.html" class="active" hreflang="en" target="_self" rel="noopener noreferrer">
                                     HOME
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#About" class="nav-link" hreflang="en" target="_self" rel="noopener noreferrer">
+                                <a href="#About" class="" hreflang="en" target="_self" rel="noopener noreferrer">
                                     ABOUT
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#Skills" class="nav-link" hreflang="en" target="_self" rel="noopener noreferrer">
+                                <a href="#Skills" class="" hreflang="en" target="_self" rel="noopener noreferrer">
                                     SKILLS
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#Projects" class="nav-link" hreflang="en" target="_self" rel="noopener noreferrer">
+                                <a href="#Projects" class="" hreflang="en" target="_self" rel="noopener noreferrer">
                                     PROJECTS
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#Achievements" class="nav-link" hreflang="en" target="_self" rel="noopener noreferrer">
+                                <a href="#Achievements" class="" hreflang="en" target="_self" rel="noopener noreferrer">
                                     ACHIEVEMENTS
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#Contact" class="nav-link" hreflang="en" target="_self" rel="noopener noreferrer">
+                                <a href="#Contact" class="" hreflang="en" target="_self" rel="noopener noreferrer">
                                     CONTACT
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://hundaaf.blog" class="nav-link" hreflang="en" target="_blank" rel="noopener noreferrer">
+                                <a href="https://hundaaf.blog" class="" hreflang="en" target="_blank" rel="noopener noreferrer">
                                     BLOG
                                 </a>
                             </li>
                         </ul>
-                        <form action="https://yg-frontenddev.github.io/Portfolio/index.html" method="get" class="d-flex" role="search" id="search">
-                            <input class="form-control me-2" type="search" placeholder="Search Web Content" aria-label="Search">
-                            <button class="fa fa-search" type="submit"></button>
-                        </form>
+                        <div class="d-flex" role="search" id="search">
+                            <input type="text" class="form-control me-1" id="user_input" placeholder="Search web content" aria-label="Search">
+                            <button type="submit" class="fa fa-search" id="search_btn" onclick="search();"></button>
+                            <script>
+                                let query = document.querySelector("#user_input");
+                                let search_btn = document.querySelector("#search_btn");
+
+                                search_btn.onclick = function() {
+
+                                    let url = "https://yg-frontenddev.github.io/Portfolio/search?q=" + query.value;
+
+                                    window.open(url, "_self");
+                                }
+                            </script>
+                        </div>
                     </div>
             </nav>
             </div>
         </div>
         </div>
     </header>
-
-    <div class="container" style="margin-top: 200px;">
-        <div class="row">
-            <div class="col" id="greet">
-                <img src="YG1.png" class="img-fluid" width="100px" height="default" alt="Yadenno Galassa" title="Yadenno Galassa" style="margin-bottom: 20px;">
-                <h4>
-                    YADENNO GALASSA
-                </h4>
-                <h4>
-                    <marquee behavior="scroll" direction="down" style="text-align: center;">
-                        PASSIONATE FRONT-END WEB DEVELOPER
-                    </marquee>
-                </h4>
-            </div>
-        </div>
-    </div>
-
+    <img src="Header_Image.png" class="img-fluid" width="100%" height="auto" alt="Header Image">
     <center>
         <h5 style="font-family: courier;
-	margin-top: 150px; color: white; font-size: 22px; margin-bottom: 80px;">About</h5>
-        <div class="container" id="About" style="font-family: sans;">
-            <div class="row">
-                <div class="col" style="margin-bottom: 50px;">
-                    <center>
-                        <h6 style="color: white;">What Can I Do</h6>
-                    </center>
-                </div>
-            </div>
+	margin-top: 50px; color: white; font-size: 22px; margin-bottom: 80px;">About</h5>
+        <div class="container" id="About" style="font-family: sans; background-color: white;">
             <div class="row">
                 <div class="col">
-                    <div class="card" style="width: 18rem; height: 450px;">
-                        <img src="YG3.png" alt="Yadenno Galassa" title="Yadenno Galassa" style="background-color: lightblue;">
-                        <div class="card-body">
-                            <h6 class="card-title" style="font-family: sans; text-align: center;"></h6>
-                            <p class="card-text" style="text-align: left;">
-                                Hi there!
-                                <br>My name is Yadenno Galassa.
-                                <br>I'm passionate Frontend Web Developer.
-                                <br>Currently i'm <sub>3</sub><sup>rd</sup> year computer science student at
-                                <a href="https://actamericancollege.com" target="_blank" hreflang="en" rel="noopener noreferrer" style="margin-left: 0px; margin-right: 0px; text-decoration: none;">
+                    <p>
+                        <img src="YG3.png" width="400px" height="auto" alt="Yadenno Galassa" title="Yadenno Galassa" style="float: left;">
+                        <label style="margin-top: 80px; float: left;">
+                            Hi there! My name is Yadenno Galassa. I 'm passionate Frontend Web Developer.
+                            <br>Currently i'm <sub>3</sub><sup>rd</sup> year computer science student at
+                            <a href="https://actamericancollege.com" target="_blank" hreflang="en" rel="noopener noreferrer" style="margin-left: 0px; margin-right: 0px; text-decoration: none;">
                                     American College of Technology.
-                                </a>
-                            </p>
-                        </div>
-                    </div>
+                            </a>
+                        </label>
+                    </p>
                 </div>
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="WordPress.png" alt="WordPress" title="Content Management System">
-                        <div class="card-body">
-                            <h6 class="card-title" style="text-align: center;">CMS</h6>
-                            <p class="card-text" style="text-align: left;">
-                                I have been working on web development & web management via CMS (Content Management System) specifically on <a href="https://wordpress.com/" target="_blank" style="margin-left: 0px; margin-right: 0px; text-decoration: none;">WordPress</a>                                for over 3 years on my own WordPress Website which is called
-                                <a href="https://hundaaf.blog" target="_blank" style="margin-left: 0px; margin-right: 0px; text-decoration: none;" hreflang="en" rel="noopener noreferrer">hundaaf.blog.</a>
-                                <br>So, i have a knowledge of content management system. i can develop attractive, responsive, well structured website for your company even with CMS or i can design your company website from scratch as you can check my
-                                previous
-                                <a href="#Projects" style="margin-left: 0px; margin-right: 0px; text-decoration: none;">projects</a> down below.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <img src="SEO.jpg" alt="SEO" title="Search Engine Optimization">
-                        <div class="card-body">
-                            <h6 class="card-title" style="text-align: center;">SEO</h6>
-                            <p class="card-text" style="text-align: left;">
-                                Also i have a knowledge of SEO (Search Engine Optimization). i can optimize your company website on google search engine as much as possible without paying any cent for google ads.
-                                <br>If you are willing to give me an opportunity
-                                <br><br><a href="#Contact" style="margin-left: 0px; margin-right: 0px; text-decoration: none;">let's get in
-                                    touch</a>
-                            </p>
-                        </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 100px;">
+            <div class="col" style="margin-bottom: 50px;">
+                <center>
+                    <h6 style="font-family: courier;
+                    margin-top: 50px; margin-bottom: 20px; color: white; font-size: 18px;">What Can I Do</h6>
+                </center>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 18rem; font-family: sans;">
+                    <img src="WordPress.png" alt="WordPress" title="Content Management System">
+                    <div class="card-body">
+                        <h6 class="card-title" style="text-align: center;">CMS</h6>
+                        <p class="card-text" style="text-align: left;">
+                            I have been working on web development & web management via CMS (Content Management System) specifically on <a href="https://wordpress.com/" target="_blank" style="margin-left: 0px; margin-right: 0px; text-decoration: none;">WordPress</a>                            for over 3 years on my own WordPress Website which is called
+                            <a href="https://hundaaf.blog" target="_blank" style="margin-left: 0px; margin-right: 0px; text-decoration: none;" hreflang="en" rel="noopener noreferrer">hundaaf.blog.</a>
+                            <br>So, i have a knowledge of content management system. i can develop attractive, responsive, well structured website for your company even with CMS or i can design your company website from scratch as you can check my previous
+                            <a href="#Projects" style="margin-left: 0px; margin-right: 0px; text-decoration: none;">projects</a> down below.
+                        </p>
                     </div>
                 </div>
             </div>
+            <div class="col">
+                <div class="card" style="width: 18rem; font-family: sans;">
+                    <img src="SEO.jpg" alt="SEO" title="Search Engine Optimization">
+                    <div class="card-body">
+                        <h6 class="card-title" style="text-align: center;">SEO</h6>
+                        <p class="card-text" style="text-align: left;">
+                            Also i have a knowledge of SEO (Search Engine Optimization). i can optimize your company website on google search engine as much as possible without paying any cent for google ads.
+                            <br>If you are willing to give me an opportunity
+                            <br><br><a href="#Contact" style="margin-left: 0px; margin-right: 0px; text-decoration: none;">let's get in
+                                    touch</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
     </center>
 
     <h5 style="text-align: center; font-family: courier;
 	margin-top: 150px; color: white; font-size: 22px; margin-bottom: 80px;">Skills</h5>
-    <div class="container" id="Skills" style="background-color: white;
-	box-shadow: -5px -5px 5px white, 5px 5px 5px white; margin-top: 50px; font-family: sans;">
+    <div class="container" id="Skills" style="background-color: white; margin-top: 50px; font-family: sans;">
         <div class="row">
             <div class="col">
                 <h5 class="fa fa-code" style="margin-top: 50px; margin-bottom: 50px;
@@ -211,8 +202,22 @@
                         60%
                     </div>
                 </div>
+                <br>
+                <h6>PHP</h6>
+                <div class="progress" role="progressbar" aria-label="Animated striped" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated text-bg-warning" style="width: 60%">
+                        60%
+                    </div>
+                </div>
+                <br>
+                <h6>MySQL</h6>
+                <div class="progress" role="progressbar" aria-label="Animated striped" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated text-bg-warning" style="width: 60%">
+                        60%
+                    </div>
+                </div>
             </div>
-            <p style="margin-top: 100px;">
+            <p style="margin-top: 50px;">
                 <em>
                     <ul>
                         <li> Technical Skills
@@ -339,8 +344,7 @@
 
     <h5 style="text-align: center; color: white; font-size: 22px; font-family: courier; margin-top: 150px; margin-bottom: 80px;">
         Contact Form</h5>
-    <div class="container" id="Contact" style="background-color: white; box-shadow: -5px -5px 5px white, 5px 5px 5px white;
-    ">
+    <div class="container" id="Contact" style="background-color: white;">
         <div class="offset-md-2">
             <form action="mailto:yadenogelasa@gmail.com" method="post" autocomplete="on" class="form-vertical" target="_blank">
                 <div class="form-row">
@@ -387,14 +391,8 @@
                     rel="noopener noreferrer" title="Youtube" style="background-color: #dd4b39;;"
                     href="https://www.youtube.com/@HundaafTech/videos" role="button"><i class="fa fa-youtube"></i></a>
             </address>
-            <label id="PP">
-                <a href="#Privacy-Policy" target="_self" hreflang="en" rel="noopener noreferrer">
-                    Privacy Policy
-                </a>
-            </label>
-            <br>
-            <label id="CR">
-                &copy;2023 YG. All Rights Reserved
+            <label>
+                    &copy;2023 YG. All rights reserved
             </label>
         </div>
     </footer>

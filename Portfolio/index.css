@@ -1,16 +1,9 @@
-body {
-    background-image: url(Background.jpg);
-    background-position: default;
-    background-size: cover;
-    background-repeat: repeat;
-}
-
 ul li a {
     text-decoration: none;
     font-family: sans;
-    margin-left: 10px;
-    margin-right: 10px;
-    font-size: 16px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 14px;
 }
 
 ul li a.active {
@@ -19,71 +12,49 @@ ul li a.active {
 
 nav a img {
     width: 40px;
-    height: default;
-    margin-left: 10px;
+    height: auto;
+    margin-left: 20px;
 }
 
 #search input {
     font-family: sans;
+    border-radius: 10px;
 }
 
 #search button {
     width: 20%;
-    background: #04AA6D;
+    height: auto;
+    background-color: #04AA6D;
     color: white;
     font-size: 16px;
     border: 2px solid white;
+    border-radius: 5px;
 }
 
 #search button:hover {
     background: #0b7dda;
 }
 
-#greet {
-    color: white;
-    text-align: center;
-    font-family: courier;
+.card {
+    box-shadow: 5px 5px 5px blue, -5px -5px 5px blue;
 }
 
-.html {
-    width: 90%;
-    background-color: #04AA6D;
-}
-
-.css {
-    width: 80%;
-    background-color: #04AA6D;
-}
-
-.js {
-    width: 60%;
-    background-color: #FFCC00;
-}
-
-.bootstrap {
-    width: 80%;
-    background-color: #04AA6D;
-}
-
-.cpp {
-    width: 60%;
-    background-color: #FFCC00;
-}
-
-.java {
-    width: 60%;
-    background-color: #FFCC00;
+.card:hover,
+.card:focus {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 5px aqua, -5px -5px 5px aqua;
 }
 
 #Contact form {
-    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #Contact form button {
     width: 80px;
     height: 40px;
     font-size: 14px;
-    font-weight: bold;
+    font-family: 'Georgia', cambria, sans;
 }
 
 #Contact form input {
@@ -107,23 +78,13 @@ nav a img {
 }
 
 footer {
+    margin-top: 400px;
     width: 100%;
-    height: 578px;
-    padding-top: 170px;
-    margin-top: 150px;
+    height: auto;
 }
 
 footer label {
     font-size: 15px;
-    color: darkblue;
-    margin-top: 50px;
-}
-
-footer #PP a {
-    color: darkblue;
-    text-decoration: none;
-}
-
-footer label a {
-    text-decoration: none;
+    color: #000;
+    font-family: 'cambria', sans;
 }

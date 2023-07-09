@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charts</title>
+    <link rel="icon" href="Logo.png" type="image/.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css" type="text/css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-secondary" role="navigation" style="margin-bottom: 60px;">
+        <a href="Charts.html" class="navbar-brand" hreflang="en" target="_self" rel="noopener noreferrer">
+            <img src="Logo.png" class="img-fluid" alt="Logo" title="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
+                <li class="nav-item">
+                    <a href="#Chart-1" class="" hreflang="en" target="_self">
+                            Chart-1
+                        </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#Chart-2" class="" hreflang="en" target="_self">
+                            Chart-2
+                        </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#Chart-3" class="" hreflang="en" target="_self">
+                            Chart-3 
+                        </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#Chart-4" class="" hreflang="en" target="_self">
+                            Chart-4
+                        </a>
+                </li>
+                <li class="nav-item">
+                    <input type="text" class="" id="user_input" placeholder="Search chart...">
+                    <button type="submit" class="fa fa-search" id="search" title=""></button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-5" id="Chart-1" title="Chart 1">
+                <style>
+                    #container1 {
+                        height: 410px;
+                    }
+                    
+                    .highcharts-figure1,
+                    .highcharts-data-table table {
+                        min-width: 320px;
+                        max-width: 800px;
+                        margin: 1em auto;
+                    }
+                    
+                    .highcharts-data-table table {
+                        font-family: Verdana, sans-serif;
+                        border-collapse: collapse;
+                        border: 1px solid #ebebeb;
+                        margin: 10px auto;
+                        text-align: center;
+                        width: 100%;
+                        max-width: 500px;
+                    }
+                    
+                    .highcharts-data-table caption {
+                        padding: 1em 0;
+                        font-size: 1.2em;
+                        color: #555;
+                    }
+                    
+                    .highcharts-data-table th {
+                        font-weight: 600;
+                        padding: 0.5em;
+                    }
+                    
+                    .highcharts-data-table td,
+                    .highcharts-data-table th,
+                    .highcharts-data-table caption {
+                        padding: 0.5em;
+                    }
+                    
+                    .highcharts-data-table thead tr,
+                    .highcharts-data-table tr:nth-child(even) {
+                        background: #f8f8f8;
+                    }
+                    
+                    .highcharts-data-table tr:hover {
+                        background: #f1f7ff;
+                    }
+                </style>
+
+                <script src="https://code.highcharts.com/highcharts.js"></script>
+                <script src="https://code.highcharts.com/modules/exporting.js"></script>
+                <script src="https://code.highcharts.com/modules/export-data.js"></script>
+                <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+                <figure class="highcharts-figure1">
+                    <div id="container1"></div>
+                    <p class="highcharts-description1">
+
+                    </p>
+                </figure>
+                <button class="btn btn-primary" id="load_new_data_btn" onclick="change_data1();">
+    Load New Data
+</button>
+
+                <script>
+                    Highcharts.chart('container1', {
+                        chart: {
+                            type: 'area',
+                            inverted: true
+                        },
+                        title: {
+                            text: 'Alibaba and Meta (Facebook) revenue',
+                            align: 'left'
+                        },
+                        accessibility: {
+                            keyboardNavigation: {
+                                seriesNavigation: {
+                                    mode: 'serialize'
+                                }
+                            }
+                        },
+                        tooltip: {
+                            pointFormat: '• {series.name}: <b>${point.y} B</b>'
+                        },
+                        legend: {
+                            layout: 'vertical',
+                            align: 'right',
+                            verticalAlign: 'top',
+                            x: -150,
+                            y: 100,
+                            floating: true,
+                            borderWidth: 1,
+                            backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF'
+                        },
+                        yAxis: {
+                            labels: {
+                                format: '${text}'
+                            },
+                            title: {
+                                text: 'Revenue (billions USD)'
+                            }
+                        },
+                        plotOptions: {
+                            series: {
+                                pointStart: 2014
+                            },
+                            area: {
+                                fillOpacity: 0.5
+                            }
+                        },
+                        series: [{
+                            name: 'Alibaba',
+                            data: [11.44, 14.89, 21.40, 34.03, 51.52, 70.49, 94.46, 129.44]
+                        }, {
+                            name: 'Meta (Facebook)',
+                            data: [11.49, 17.08, 26.88, 39.94, 55.01, 69.65, 84.17, 117.93]
+                        }]
+                    });
+
+                    function change_data1() {
+                        // Data retrieved from https://www.ssb.no/energi-og-industri/olje-og-gass/statistikk/sal-av-petroleumsprodukt/artikler/auka-sal-av-petroleumsprodukt-til-vegtrafikk
+                        Highcharts.chart('container1', {
+                            title: {
+                                text: 'Sales of petroleum products March, Norway',
+                                align: 'left'
+                            },
+                            xAxis: {
+                                categories: ['Jet fuel', 'Duty-free diesel', 'Petrol', 'Diesel', 'Gas oil']
+                            },
+                            yAxis: {
+                                title: {
+                                    text: 'Million liters'
+                                }
+                            },
+                            tooltip: {
+                                valueSuffix: ' million liters'
+                            },
+                            plotOptions: {
+                                series: {
+                                    borderRadius: '25%'
+                                }
+                            },
+                            series: [{
+                                type: 'column',
+                                name: '2020',
+                                data: [59, 83, 65, 228, 184]
+                            }, {
+                                type: 'column',
+                                name: '2021',
+                                data: [24, 79, 72, 240, 167]
+                            }, {
+                                type: 'column',
+                                name: '2022',
+                                data: [58, 88, 75, 250, 176]
+                            }, {
+                                type: 'spline',
+                                name: 'Average',
+                                data: [47, 83.33, 70.66, 239.33, 175.66],
+                                marker: {
+                                    lineWidth: 2,
+                                    lineColor: Highcharts.getOptions().colors[3],
+                                    fillColor: 'white'
+                                }
+                            }, {
+                                type: 'pie',
+                                name: 'Total',
+                                data: [{
+                                    name: '2020',
+                                    y: 619,
+                                    color: Highcharts.getOptions().colors[0], // 2020 color
+                                    dataLabels: {
+                                        enabled: true,
+                                        distance: -50,
+                                        format: '{point.total} M',
+                                        style: {
+                                            fontSize: '15px'
+                                        }
+                                    }
+                                }, {
+                                    name: '2021',
+                                    y: 586,
+                                    color: Highcharts.getOptions().colors[1] // 2021 color
+                                }, {
+                                    name: '2022',
+                                    y: 647,
+                                    color: Highcharts.getOptions().colors[2] // 2022 color
+                                }],
+                                center: [75, 65],
+                                size: 100,
+                                innerSize: '70%',
+                                showInLegend: false,
+                                dataLabels: {
+                                    enabled: false
+                                }
+                            }]
+                        });
+
+                    }
+                </script>
+            </div>
+            <div class="col-5" id="Chart-2" title="Chart 2">
+                <style>
+                    @import "https://code.highcharts.com/css/highcharts.css";
+                    .highcharts-pie-series .highcharts-point {
+                        stroke: #ede;
+                        stroke-width: 2px;
+                    }
+                    
+                    .highcharts-pie-series .highcharts-data-label-connector {
+                        stroke: silver;
+                        stroke-dasharray: 2, 2;
+                        stroke-width: 2px;
+                    }
+                    
+                    .highcharts-figure2,
+                    .highcharts-data-table table {
+                        min-width: 320px;
+                        max-width: 600px;
+                        margin: 1em auto;
+                    }
+                    
+                    .highcharts-data-table table {
+                        font-family: Verdana, sans-serif;
+                        border-collapse: collapse;
+                        border: 1px solid #ebebeb;
+                        margin: 10px auto;
+                        text-align: center;
+                        width: 100%;
+                        max-width: 500px;
+                    }
+                    
+                    .highcharts-data-table caption {
+                        padding: 1em 0;
+                        font-size: 1.2em;
+                        color: #555;
+                    }
+                    
+                    .highcharts-data-table th {
+                        font-weight: 600;
+                        padding: 0.5em;
+                    }
+                    
+                    .highcharts-data-table td,
+                    .highcharts-data-table th,
+                    .highcharts-data-table caption {
+                        padding: 0.5em;
+                    }
+                    
+                    .highcharts-data-table thead tr,
+                    .highcharts-data-table tr:nth-child(even) {
+                        background: #f8f8f8;
+                    }
+                    
+                    .highcharts-data-table tr:hover {
+                        background: #f1f7ff;
+                    }
+                </style>
+
+                <script src="https://code.highcharts.com/highcharts.js "></script>
+                <script src="https://code.highcharts.com/modules/exporting.js "></script>
+                <script src="https://code.highcharts.com/modules/export-data.js "></script>
+                <script src="https://code.highcharts.com/modules/accessibility.js "></script>
+
+                <figure class="highcharts-figure2">
+                    <div id="container2"></div>
+                    <p class="highcharts-description2">
+
+                    </p>
+                </figure>
+
+                <button class="btn btn-primary" id="load_new_data_btn" onclick="change_data2();">
+        Load New Data
+    </button>
+
+                <script>
+                    Highcharts.chart('container2', {
+                        chart: {
+                            styledMode: true
+                        },
+                        title: {
+                            text: 'Mobile vendor market share, 2021'
+                        },
+                        xAxis: {
+                            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+                        },
+                        series: [{
+                            type: 'pie',
+                            allowPointSelect: true,
+                            keys: ['name', 'y', 'selected', 'sliced'],
+                            data: [
+                                ['Samsung', 27.79, true, true],
+                                ['Apple', 27.34, false],
+                                ['Xiaomi', 10.87, false],
+                                ['Huawei', 8.48, false],
+                                ['Oppo', 5.38, false],
+                                ['Vivo', 4.17, false],
+                                ['Realme', 2.57, false],
+                                ['Unknown', 2.45, false],
+                                ['Motorola', 2.22, false],
+                                ['LG', 1.53, false],
+                                ['Other', 7.2, false]
+                            ],
+                            showInLegend: true
+                        }]
+                    });
+
+
+                    function change_data2() {
+                        var colors = Highcharts.getOptions().colors;
+
+                        Highcharts.chart('container2', {
+                            chart: {
+                                type: 'spline'
+                            },
+
+                            legend: {
+                                symbolWidth: 40
+                            },
+
+                            title: {
+                                text: 'Most common desktop screen readers',
+                                align: 'left'
+                            },
+
+                            subtitle: {
+                                text: 'Source: WebAIM. Click on points to visit official screen reader website',
+                                align: 'left'
+                            },
+
+                            yAxis: {
+                                title: {
+                                    text: 'Percentage usage'
+                                },
+                                accessibility: {
+                                    description: 'Percentage usage'
+                                }
+                            },
+
+                            xAxis: {
+                                title: {
+                                    text: 'Time'
+                                },
+                                accessibility: {
+                                    description: 'Time from December 2010 to September 2019'
+                                },
+                                categories: ['December 2010', 'May 2012', 'January 2014', 'July 2015', 'October 2017', 'September 2019']
+                            },
+
+                            tooltip: {
+                                valueSuffix: '%',
+                                stickOnContact: true
+                            },
+
+                            plotOptions: {
+                                series: {
+                                    point: {
+                                        events: {
+                                            click: function() {
+                                                window.location.href = this.series.options.website;
+                                            }
+                                        }
+                                    },
+                                    cursor: 'pointer',
+                                    lineWidth: 2
+                                }
+                            },
+
+                            series: [{
+                                name: 'NVDA',
+                                data: [34.8, 43.0, 51.2, 41.4, 64.9, 72.4],
+                                website: 'https://www.nvaccess.org',
+                                color: colors[2],
+                                accessibility: {
+                                    description: 'This is the most used screen reader in 2019.'
+                                }
+                            }, {
+                                name: 'JAWS',
+                                data: [69.6, 63.7, 63.9, 43.7, 66.0, 61.7],
+                                website: 'https://www.freedomscientific.com/Products/Blindness/JAWS',
+                                dashStyle: 'ShortDashDot',
+                                color: colors[0]
+                            }, {
+                                name: 'VoiceOver',
+                                data: [20.2, 30.7, 36.8, 30.9, 39.6, 47.1],
+                                website: 'http://www.apple.com/accessibility/osx/voiceover',
+                                dashStyle: 'ShortDot',
+                                color: colors[1]
+                            }, {
+                                name: 'Narrator',
+                                data: [null, null, null, null, 21.4, 30.3],
+                                website: 'https://support.microsoft.com/en-us/help/22798/windows-10-complete-guide-to-narrator',
+                                dashStyle: 'Dash',
+                                color: colors[9]
+                            }, {
+                                name: 'ZoomText/Fusion',
+                                data: [6.1, 6.8, 5.3, 27.5, 6.0, 5.5],
+                                website: 'http://www.zoomtext.com/products/zoomtext-magnifierreader',
+                                dashStyle: 'ShortDot',
+                                color: colors[5]
+                            }, {
+                                name: 'Other',
+                                data: [42.6, 51.5, 54.2, 45.8, 20.2, 15.4],
+                                website: 'http://www.disabled-world.com/assistivedevices/computer/screen-readers.php',
+                                dashStyle: 'ShortDash',
+                                color: colors[3]
+                            }],
+
+                            responsive: {
+                                rules: [{
+                                    condition: {
+                                        maxWidth: 550
+                                    },
+                                    chartOptions: {
+                                        chart: {
+                                            spacingLeft: 3,
+                                            spacingRight: 3
+                                        },
+                                        legend: {
+                                            itemWidth: 150
+                                        },
+                                        xAxis: {
+                                            categories: ['Dec. 2010', 'May 2012', 'Jan. 2014', 'July 2015', 'Oct. 2017', 'Sep. 2019'],
+                                            title: ''
+                                        },
+                                        yAxis: {
+                                            visible: false
+                                        }
+                                    }
+                                }]
+                            }
+                        });
+
+                    }
+                </script>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-5" id="Chart-3" title="Chart 3">
+                <style>
+                    #container3 {
+                        height: 400px;
+                    }
+                    
+                    .highcharts-figure3,
+                    .highcharts-data-table table {
+                        min-width: 310px;
+                        max-width: 800px;
+                        margin: 1em auto;
+                    }
+                    
+                    .highcharts-data-table table {
+                        font-family: Verdana, sans-serif;
+                        border-collapse: collapse;
+                        border: 1px solid #ebebeb;
+                        margin: 10px auto;
+                        text-align: center;
+                        width: 100%;
+                        max-width: 500px;
+                    }
+                    
+                    .highcharts-data-table caption {
+                        padding: 1em 0;
+                        font-size: 1.2em;
+                        color: #555;
+                    }
+                    
+                    .highcharts-data-table th {
+                        font-weight: 600;
+                        padding: 0.5em;
+                    }
+                    
+                    .highcharts-data-table td,
+                    .highcharts-data-table th,
+                    .highcharts-data-table caption {
+                        padding: 0.5em;
+                    }
+                    
+                    .highcharts-data-table thead tr,
+                    .highcharts-data-table tr:nth-child(even) {
+                        background: #f8f8f8;
+                    }
+                    
+                    .highcharts-data-table tr:hover {
+                        background: #f1f7ff;
+                    }
+                </style>
+
+                <script src="https://code.highcharts.com/highcharts.js"></script>
+                <script src="https://code.highcharts.com/modules/series-label.js"></script>
+                <script src="https://code.highcharts.com/modules/exporting.js"></script>
+                <script src="https://code.highcharts.com/modules/export-data.js"></script>
+                <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+                <figure class="highcharts-figure3">
+                    <div id="container3"></div>
+                    <p class="highcharts-description3">
+
+                    </p>
+                </figure>
+
+                <button class="btn btn-primary" id="load_new_data_btn" onclick="change_data3()">
+        Load New Data
+    </button>
+
+                <script>
+                    Highcharts.chart('container3', {
+                        chart: {
+                            zoomType: 'xy'
+                        },
+                        title: {
+                            text: 'Average Monthly Weather Data for Tokyo',
+                            align: 'left'
+                        },
+                        subtitle: {
+                            text: 'Source: WorldClimate.com',
+                            align: 'left'
+                        },
+                        xAxis: [{
+                            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                                'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+                            ],
+                            crosshair: true
+                        }],
+                        yAxis: [{
+                            labels: {
+                                format: '{value}°C',
+                                style: {
+                                    color: Highcharts.getOptions().colors[2]
+                                }
+                            },
+                            title: {
+                                text: 'Temperature',
+                                style: {
+                                    color: Highcharts.getOptions().colors[2]
+                                }
+                            },
+                            opposite: true
+
+                        }, {
+                            gridLineWidth: 0,
+                            title: {
+                                text: 'Rainfall',
+                                style: {
+                                    color: Highcharts.getOptions().colors[0]
+                                }
+                            },
+                            labels: {
+                                format: '{value} mm',
+                                style: {
+                                    color: Highcharts.getOptions().colors[0]
+                                }
+                            }
+
+                        }, {
+                            gridLineWidth: 0,
+                            title: {
+                                text: 'Sea-Level Pressure',
+                                style: {
+                                    color: Highcharts.getOptions().colors[1]
+                                }
+                            },
+                            labels: {
+                                format: '{value} mb',
+                                style: {
+                                    color: Highcharts.getOptions().colors[1]
+                                }
+                            },
+                            opposite: true
+                        }],
+                        tooltip: {
+                            shared: true
+                        },
+                        legend: {
+                            layout: 'vertical',
+                            align: 'left',
+                            x: 80,
+                            verticalAlign: 'top',
+                            y: 55,
+                            floating: true,
+                            backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || // theme
+                                'rgba(255,255,255,0.25)'
+                        },
+                        series: [{
+                            name: 'Rainfall',
+                            type: 'column',
+                            yAxis: 1,
+                            data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+                            tooltip: {
+                                valueSuffix: ' mm'
+                            }
+
+                        }, {
+                            name: 'Sea-Level Pressure',
+                            type: 'spline',
+                            yAxis: 2,
+                            data: [1016, 1016, 1015.9, 1015.5, 1012.3, 1009.5, 1009.6, 1010.2, 1013.1, 1016.9, 1018.2, 1016.7],
+                            marker: {
+                                enabled: false
+                            },
+                            dashStyle: 'shortdot',
+                            tooltip: {
+                                valueSuffix: ' mb'
+                            }
+
+                        }, {
+                            name: 'Temperature',
+                            type: 'spline',
+                            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
+                            tooltip: {
+                                valueSuffix: ' °C'
+                            }
+                        }],
+                        responsive: {
+                            rules: [{
+                                condition: {
+                                    maxWidth: 500
+                                },
+                                chartOptions: {
+                                    legend: {
+                                        floating: false,
+                                        layout: 'horizontal',
+                                        align: 'center',
+                                        verticalAlign: 'bottom',
+                                        x: 0,
+                                        y: 0
+                                    },
+                                    yAxis: [{
+                                        labels: {
+                                            align: 'right',
+                                            x: 0,
+                                            y: -6
+                                        },
+                                        showLastLabel: false
+                                    }, {
+                                        labels: {
+                                            align: 'left',
+                                            x: 0,
+                                            y: -6
+                                        },
+                                        showLastLabel: false
+                                    }, {
+                                        visible: false
+                                    }]
+                                }
+                            }]
+                        }
+                    });
+
+                    function change_data3() {
+                        // Data retrieved from https://yearbook.enerdata.net/electricity/world-electricity-production-statistics.html
+                        Highcharts.chart('container3', {
+                            chart: {
+                                type: 'column',
+                                options3d: {
+                                    enabled: true,
+                                    alpha: 15,
+                                    beta: 15,
+                                    viewDistance: 25,
+                                    depth: 40
+                                }
+                            },
+
+                            title: {
+                                text: ' Electricity production in countries, grouped by continent',
+                                align: 'left'
+                            },
+
+                            xAxis: {
+                                labels: {
+                                    skew3d: true,
+                                    style: {
+                                        fontSize: '16px'
+                                    }
+                                }
+                            },
+
+                            yAxis: {
+                                allowDecimals: false,
+                                min: 0,
+                                title: {
+                                    text: 'TWh',
+                                    skew3d: true,
+                                    style: {
+                                        fontSize: '16px'
+                                    }
+                                }
+                            },
+
+                            tooltip: {
+                                headerFormat: '<b>{point.key}</b><br>',
+                                pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: {point.y} / {point.stackTotal}'
+                            },
+
+                            plotOptions: {
+                                series: {
+                                    pointStart: 2016
+                                },
+                                column: {
+                                    stacking: 'normal',
+                                    depth: 40
+                                }
+                            },
+
+                            series: [{
+                                name: 'South Korea',
+                                data: [563, 567, 590, 582, 571],
+                                stack: 'Asia'
+                            }, {
+                                name: 'Germany',
+                                data: [650, 654, 643, 612, 572],
+                                stack: 'Europe'
+                            }, {
+                                name: 'Saudi Arabia',
+                                data: [368, 378, 378, 367, 363],
+                                stack: 'Asia'
+                            }, {
+                                name: 'France',
+                                data: [564, 562, 582, 571, 533],
+                                stack: 'Europe'
+                            }]
+                        });
+
+                    }
+                </script>
+            </div>
+            <div class="col-5" id="Chart-4" title="Chart 4">
+                <style>
+                    #container4 {
+                        height: 400px;
+                    }
+                    
+                    .highcharts-figure4,
+                    .highcharts-data-table table {
+                        min-width: 300px;
+                        max-width: 500px;
+                        margin: 1em auto;
+                    }
+                    
+                    .highcharts-data-table table {
+                        font-family: Verdana, sans-serif;
+                        border-collapse: collapse;
+                        border: 1px solid #ebebeb;
+                        margin: 10px auto;
+                        text-align: center;
+                        width: 100%;
+                        max-width: 500px;
+                    }
+                    
+                    .highcharts-data-table caption {
+                        padding: 1em 0;
+                        font-size: 1.2em;
+                        color: #555;
+                    }
+                    
+                    .highcharts-data-table th {
+                        font-weight: 600;
+                        padding: 0.5em;
+                    }
+                    
+                    .highcharts-data-table td,
+                    .highcharts-data-table th,
+                    .highcharts-data-table caption {
+                        padding: 0.5em;
+                    }
+                    
+                    .highcharts-data-table thead tr,
+                    .highcharts-data-table tr:nth-child(even) {
+                        background: #f8f8f8;
+                    }
+                    
+                    .highcharts-data-table tr:hover {
+                        background: #f1f7ff;
+                    }
+                </style>
+
+                <script src="https://code.highcharts.com/highcharts.js"></script>
+                <script src="https://code.highcharts.com/highcharts-more.js"></script>
+                <script src="https://code.highcharts.com/modules/exporting.js"></script>
+                <script src="https://code.highcharts.com/modules/export-data.js"></script>
+                <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+                <figure class="highcharts-figure4">
+                    <div id="container4"></div>
+                    <p class="highcharts-description4">
+
+                    </p>
+                </figure>
+
+                <button class="btn btn-primary" id="load_new_data_btn" onclick="change_data4();">
+    Load New Data
+</button>
+
+                <script>
+                    const getNow = () => {
+                        const now = new Date();
+
+                        return {
+                            date: now,
+                            hours: now.getHours() + now.getMinutes() / 60,
+                            minutes: now.getMinutes() * 12 / 60 + now.getSeconds() * 12 / 3600,
+                            seconds: now.getSeconds() * 12 / 60
+                        };
+                    };
+
+                    let now = getNow();
+
+                    // Create the chart
+                    Highcharts.chart('container4', {
+
+                            chart: {
+                                type: 'gauge',
+                                plotBackgroundColor: null,
+                                plotBackgroundImage: null,
+                                plotBorderWidth: 0,
+                                plotShadow: false,
+                                height: '80%'
+                            },
+
+                            credits: {
+                                enabled: false
+                            },
+
+                            title: {
+                                text: 'The Highcharts clock'
+                            },
+
+                            pane: {
+                                background: [{}, {
+                                    backgroundColor: Highcharts.svg ? {
+                                        radialGradient: {
+                                            cx: 0.5,
+                                            cy: -0.4,
+                                            r: 1.9
+                                        },
+                                        stops: [
+                                            [0.5, 'rgba(255, 255, 255, 0.2)'],
+                                            [0.5, 'rgba(200, 200, 200, 0.2)']
+                                        ]
+                                    } : null
+                                }]
+                            },
+
+                            yAxis: {
+                                labels: {
+                                    distance: -20
+                                },
+                                min: 0,
+                                max: 12,
+                                lineWidth: 0,
+                                showFirstLabel: false,
+
+                                minorTickInterval: 'auto',
+                                minorTickWidth: 1,
+                                minorTickLength: 5,
+                                minorTickPosition: 'inside',
+                                minorGridLineWidth: 0,
+                                minorTickColor: '#666',
+
+                                tickInterval: 1,
+                                tickWidth: 2,
+                                tickPosition: 'inside',
+                                tickLength: 10,
+                                tickColor: '#666',
+                                title: {
+                                    text: 'Powered by<br/>Highcharts',
+                                    style: {
+                                        color: '#BBB',
+                                        fontWeight: 'normal',
+                                        fontSize: '8px',
+                                        lineHeight: '10px'
+                                    },
+                                    y: 10
+                                }
+                            },
+
+                            tooltip: {
+                                format: '{series.chart.tooltipText}'
+                            },
+
+                            series: [{
+                                data: [{
+                                    id: 'hour',
+                                    y: now.hours,
+                                    dial: {
+                                        radius: '60%',
+                                        baseWidth: 4,
+                                        baseLength: '95%',
+                                        rearLength: 0
+                                    }
+                                }, {
+                                    id: 'minute',
+                                    y: now.minutes,
+                                    dial: {
+                                        baseLength: '95%',
+                                        rearLength: 0
+                                    }
+                                }, {
+                                    id: 'second',
+                                    y: now.seconds,
+                                    dial: {
+                                        radius: '100%',
+                                        baseWidth: 1,
+                                        rearLength: '20%'
+                                    }
+                                }],
+                                animation: false,
+                                dataLabels: {
+                                    enabled: false
+                                }
+                            }]
+                        },
+
+                        function(chart) {
+                            setInterval(function() {
+
+                                now = getNow();
+
+                                if (chart.axes) {
+                                    const hour = chart.get('hour'),
+                                        minute = chart.get('minute'),
+                                        second = chart.get('second');
+
+                                    chart.tooltipText = Highcharts.dateFormat('%H:%M:%S', now.date);
+
+                                    hour.update(now.hours, true, false);
+                                    minute.update(now.minutes, true, false);
+
+                                    if (now.seconds === 0) {
+                                        second.update(-0.2, true, false);
+                                    }
+
+                                    second.update(now.seconds, true, {
+                                        easing: 'easeOutBounce'
+                                    });
+                                }
+
+                            }, 1000);
+
+                        });
+
+                    Math.easeOutBounce = function(pos) {
+                        if ((pos) < (1 / 2.75)) {
+                            return (7.5625 * pos * pos);
+                        }
+                        if (pos < (2 / 2.75)) {
+                            return (7.5625 * (pos -= (1.5 / 2.75)) * pos + 0.75);
+                        }
+                        if (pos < (2.5 / 2.75)) {
+                            return (7.5625 * (pos -= (2.25 / 2.75)) * pos + 0.9375);
+                        }
+                        return (7.5625 * (pos -= (2.625 / 2.75)) * pos + 0.984375);
+                    };
+
+                    function change_data4() {
+                        Highcharts.chart('container4', {
+
+                            chart: {
+                                type: 'gauge',
+                                plotBackgroundColor: null,
+                                plotBackgroundImage: null,
+                                plotBorderWidth: 0,
+                                plotShadow: false,
+                                height: '80%'
+                            },
+
+                            title: {
+                                text: 'Speedometer'
+                            },
+
+                            pane: {
+                                startAngle: -90,
+                                endAngle: 89.9,
+                                background: null,
+                                center: ['50%', '75%'],
+                                size: '110%'
+                            },
+
+                            // the value axis
+                            yAxis: {
+                                min: 0,
+                                max: 200,
+                                tickPixelInterval: 72,
+                                tickPosition: 'inside',
+                                tickColor: Highcharts.defaultOptions.chart.backgroundColor || '#FFFFFF',
+                                tickLength: 20,
+                                tickWidth: 2,
+                                minorTickInterval: null,
+                                labels: {
+                                    distance: 20,
+                                    style: {
+                                        fontSize: '14px'
+                                    }
+                                },
+                                lineWidth: 0,
+                                plotBands: [{
+                                    from: 0,
+                                    to: 120,
+                                    color: '#55BF3B', // green
+                                    thickness: 20
+                                }, {
+                                    from: 120,
+                                    to: 160,
+                                    color: '#DDDF0D', // yellow
+                                    thickness: 20
+                                }, {
+                                    from: 160,
+                                    to: 200,
+                                    color: '#DF5353', // red
+                                    thickness: 20
+                                }]
+                            },
+
+                            series: [{
+                                name: 'Speed',
+                                data: [80],
+                                tooltip: {
+                                    valueSuffix: ' km/h'
+                                },
+                                dataLabels: {
+                                    format: '{y} km/h',
+                                    borderWidth: 0,
+                                    color: (
+                                        Highcharts.defaultOptions.title &&
+                                        Highcharts.defaultOptions.title.style &&
+                                        Highcharts.defaultOptions.title.style.color
+                                    ) || '#333333',
+                                    style: {
+                                        fontSize: '16px'
+                                    }
+                                },
+                                dial: {
+                                    radius: '80%',
+                                    backgroundColor: 'gray',
+                                    baseWidth: 12,
+                                    baseLength: '0%',
+                                    rearLength: '0%'
+                                },
+                                pivot: {
+                                    backgroundColor: 'gray',
+                                    radius: 6
+                                }
+
+                            }]
+
+                        });
+
+                        // Add some life
+                        setInterval(() => {
+                            const chart = Highcharts.charts[0];
+                            if (chart && !chart.renderer.forExport) {
+                                const point = chart.series[0].points[0],
+                                    inc = Math.round((Math.random() - 0.5) * 20);
+
+                                let newVal = point.y + inc;
+                                if (newVal < 0 || newVal > 200) {
+                                    newVal = point.y - inc;
+                                }
+
+                                point.update(newVal);
+                            }
+
+                        }, 3000);
+                    }
+
+
+
+                    // to search chart
+                    const searchButton = document.getElementById('#search');
+                    const inputField = document.getElementById('#user_input').value;
+
+                    searchButton.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const inputValue = inputField.value;
+                        fetch('https://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=61766f013d866e53e3632ae06a816767')
+                            .then(response => response.json())
+                            .then(data => {
+                                let humv = data.main.humidity;
+                                let pessv = data.main.pressure;
+                                let seav = data.main.sea_level;
+                                var mintemp = data.main.temp_min;
+                                var maxtemp = data.main.temp_max;
+                            })
+                    })
+                </script>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row" id="footer">
+        <label>&copy;2023 highcharts.com, All rights reserved.</label>
+    </div>
+</body>
+
+</html>

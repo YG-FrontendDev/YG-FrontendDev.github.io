@@ -1,0 +1,67 @@
+ul li a {
+    text-decoration: none;
+    font-family: sans;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+ul li a:hover {
+    color: silver;
+}
+
+nav a img {
+    width: 50px;
+    height: auto;
+    margin-left: 50px;
+}
+
+ul li input {
+    font-family: sans;
+}
+
+ul li button {
+    width: 50px;
+    height: 30px;
+    color: white;
+    background-color: limegreen;
+    border: 1px solid white;
+    font-family: sans;
+}
+
+ul li button:hover {
+    color: white;
+    background-color: blue;
+}
+
+#load_new_data_btn {
+    float: right;
+    font-family: sans;
+}
+
+.col-5 {
+    box-shadow: 5px 5px 5px silver, -5px -5px 5px silver;
+    margin-bottom: 100px;
+    margin-left: 70px;
+    padding: 20px;
+}
+
+.col-5:hover {
+    box-shadow: 3px 3px 3px blue, -3px -3px 3px blue;
+}
+
+#footer {
+    background-color: darkblue;
+    height: 45px;
+    margin-top: 50px;
+}
+
+#footer label {
+    color: white;
+    text-align: center;
+    font-family: sans;
+    font-size: 16px;
+    margin-top: 10px;
+}
