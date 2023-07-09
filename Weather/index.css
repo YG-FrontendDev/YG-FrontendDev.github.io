@@ -1,0 +1,54 @@
+body {
+    background-image: url("Background.avif");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-size: 24px;
+    font-family: sans;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+}
+
+hr {
+    border: 1px solid white;
+}
+
+#container1 {
+    margin-top: 200px;
+}
+
+#container2 {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+input {
+    font-family: sans;
+    box-shadow: 5px 5px 5px lightskyblue, -5px -5px 5px lightskyblue;
+}
+
+#search_btn {
+    width: 60px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+footer {
+    width: auto;
+    height: 80px;
+    text-align: center;
+    margin-top: 300px;
+    background-color: whitesmoke;
+}
+
+footer a {
+    margin-left: 30px;
+    margin-right: 30px;
+    color: #000;
+    text-decoration: none;
+    font-family: sans;
+}
